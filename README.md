@@ -6,6 +6,12 @@ A tool to generate Go structs from a PostgreSQL database schema.
 
 This tool is designed to generate Go structs from a PostgreSQL database schema. It can generate either a single `models.go` file with all structs or separate files for each table.
 
+## Installation
+
+```bash
+go get -tool github.com/giancarlosisasi/sql-to-go
+```
+
 ## Usage
 
 ```bash
