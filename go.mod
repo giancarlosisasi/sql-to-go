@@ -1,4 +1,4 @@
-module sql-to-go
+module github.com/giancarlosisasi/sql-to-go
 
 go 1.24.3
 
