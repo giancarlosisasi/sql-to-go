@@ -1,0 +1,19 @@
+services:
+  # Blog/CMS sample database
+  blog-db:
+    image: postgres:15
+    container_name: blog-postgres
+    environment:
+      POSTGRES_DB: blogdb
+      POSTGRES_USER: blogger
+      POSTGRES_PASSWORD: blogpass
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./init-scripts/blog-db.sql:/docker-entrypoint-initdb.d/01-blog.sql
+    networks:
+      - db-network
+
+networks:
+  db-network:
+    driver: bridge
