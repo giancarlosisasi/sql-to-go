@@ -19,7 +19,7 @@ Database Schema to Go Struct Generator
 =====================================
 
 Usage:
- go run . -db <database_url> [flags]
+ go tool sql-to-go -db <database_url> [flags]
 
 
 Flags:
@@ -40,9 +40,9 @@ Output modes:
   both      - Generate both combined and separate files
 
 Examples:
- go run . -db "postgres://user:password@localhost:5432/blogapp?sslmode=disable"
- go run . -db "..." -mode separate -output ./internal/models
- go run . -db "..." -mode both -package **entities**
+ go tool sql-to-go -db "postgres://user:password@localhost:5433/blogapp?sslmode=disable"
+ go tool sql-to-go -db "..." -mode separate -output ./internal/models
+ go tool sql-to-go -db "..." -mode both -package **entities**
 
 ```
 
